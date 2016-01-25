@@ -1,0 +1,4 @@
+*.pyc
+myprojectenv
+db.sqlite3
+
