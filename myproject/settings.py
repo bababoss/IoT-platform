@@ -52,6 +52,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'myproject.urls'
+#ROOT_URLCONF = 'si2chip_cloud.urls'
 
 TEMPLATES = [
     {
