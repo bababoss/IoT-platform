@@ -6,7 +6,7 @@ from .models import TempMeasure
 from .models import MotionSensor
 
 class TempMeasureAdmin(admin.ModelAdmin):
-    list_display = ["__unicode__","timestamp"]
+    list_display = ["temperature","timestamp"]
     forms = TempMeasure
     #class Meta:
         #model = TempMeasure
