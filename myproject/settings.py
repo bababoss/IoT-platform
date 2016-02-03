@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'si2chip_cloud',
+    'Si2chipCloud',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'myproject.urls'
-#ROOT_URLCONF = 'si2chip_cloud.urls'
+
 
 TEMPLATES = [
     {
@@ -124,4 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATIC_ROOT = os.path.join(BASE_DIR, "Si2chipCloud/static/Si2chipCloud")
+
+
