@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+
 
 # Application definition
 
@@ -83,7 +85,8 @@ DATABASES = {
         'USER': 'myprojectuser',
         'PASSWORD': 'password',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
+        'autocommit': True,
     }
 }
 

@@ -1,7 +1,20 @@
 <title>{{ title }}</title>
-
+</br>
 <form method='POST' action=''>{% csrf_token %}
     {{form.as_p}}
-    <input type='submit' value='Enter Sensor Data'>
-    
+    <input type='submit' value='Enter Sensor Data'>   
 </form>
+
+{% if queryset %}
+</br>
+<h1>Sensor Data Block</h1>
+<table class='table'>
+    {% for instance in queryset %}
+        <tr><td>{{ instance }} </td><td>{{instance.temperature}}</td><td>{{ instance.timestamp }}ago</td>
+        {% if instance.temperature == 1.0 %}
+            <td>Human is present in the room</td>
+        {% endif %}
+        </tr>
+    {% endfor %}
+</table>
+{% endif %}

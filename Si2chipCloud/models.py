@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 from datetime import datetime
+
+
 # Create your models here.
 class TempMeasure(models.Model):
     #temperature = models.CharField(max_length=250, blank=False)
@@ -9,7 +11,7 @@ class TempMeasure(models.Model):
     timestamp = models.DateTimeField(auto_now_add = True)
 
     def __unicode__(self):
-        return self.temperature
+        return str(self.temperature)
     #code
 
 class MotionSensor(models.Model):
