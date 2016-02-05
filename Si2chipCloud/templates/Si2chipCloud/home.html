@@ -1,10 +1,11 @@
 <title>{{ title }}</title>
 </br>
 <form method='POST' action=''>{% csrf_token %}
-    {{form.as_p}}
+    {{form1.as_p}}
+    {{form2.as_p}}
     <input type='submit' value='Enter Sensor Data'>   
 </form>
-<div><iframe width="420" height="315" src="https://www.youtube.com/embed/jCWJm2B_SNM" frameborder="0" allowfullscreen></iframe></div>
+
 {% if queryset %}
 </br>
 <h1>Sensor Data Block</h1>
@@ -12,7 +13,9 @@
     {% for instance in queryset %}
         <tr><td>{{ instance }} </td><td>{{instance.temperature}}</td><td>{{ instance.timestamp }}ago</td>
         {% if instance.temperature == 1.0 %}
-            <td>Human is present in the room</td>
+            <td style="color: blue" >Motion detected</td>
+        {% else %}
+            <td style="color: red">Motion Undetected</td>
         {% endif %}
         </tr>
     {% endfor %}

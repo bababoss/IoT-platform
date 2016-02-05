@@ -14,7 +14,9 @@ class TempMeasure(models.Model):
         return str(self.temperature)
     #code
 
-class MotionSensor(models.Model):
+class MotionMeasure(models.Model):
     motion = models.IntegerField(default=1)
     timestamp = models.DateTimeField(auto_now_add = True)
+    def __unicode__(self):
+        return str(self.motion)
     #code
