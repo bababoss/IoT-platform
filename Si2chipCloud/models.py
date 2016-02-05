@@ -17,6 +17,8 @@ class TempMeasure(models.Model):
 class MotionMeasure(models.Model):
     motion = models.FloatField(null=True, blank=True)
     timestamp = models.DateTimeField(auto_now_add = True)
+    
+    
     def __unicode__(self):
         return str(self.motion)
     #code

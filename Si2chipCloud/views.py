@@ -20,7 +20,8 @@ transaction.rollback()
 #def index(request):
     #return render(request, 'Si2chipCloud/index.html', {})
 def home(request):
-       
+    
+    
     title = 'IoT Si2chip'
     msg='Welcome To Si2chip'
 
@@ -35,11 +36,11 @@ def home(request):
         
     }
     
-    instance = form1.save(commit=False)
-    instance.save()
-    instance = form2.save(commit=False)
-    instance.save()
-    
+    instance1 = form1.save(commit=False)
+    instance1.save()
+    instance2 = form2.save(commit=False)
+    instance2.save()
+
     queryset = TempMeasure.objects.all().order_by('-timestamp')
     context = {
         "queryset": queryset,
@@ -48,5 +49,6 @@ def home(request):
     }
     
     return render(request, 'Si2chipCloud/home.html', context)
+    
     
 
