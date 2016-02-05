@@ -1,0 +1,24 @@
+sudo apt-get install git
+
+git init
+
+git status
+
+#edit whatever you want to ignore
+sudo nano .gitignore
+
+#add files
+git add -A .
+
+#commit 
+git commit -m "frist commit"
+
+#conflict if you need
+git config merge.conflictstyle diff3
+
+#pull file if need 
+git pull
+
+#push your data to github
+git push
+
